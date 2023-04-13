@@ -1,24 +1,21 @@
 package solid_principles.single_responsibility_principle;
 
-public class DogHotelImpl implements DogHotel {
+public class DogHotelFinancesImpl implements DogHotelFinances {
+
     private int balance;
-    @Override
-    public void washTheDog() {
-        System.out.println("Собака помыта");
+
+    public void washingPayment() {
         setBalance(getBalance() + 100);
     }
 
-    @Override
-    public void giveSomeEat() {
-        System.out.println("Собака поела");
-        setBalance(getBalance() + 50);    }
+    public void eatingPayment() {
+        setBalance(getBalance() + 50);
+    }
 
-    @Override
-    public void healTheDog() {
-        System.out.println("Собака вылечена");
-        setBalance(getBalance() + 500);    }
+    public void healingPayment() {
+        setBalance(getBalance() + 500);
+    }
 
-    @Override
     public String makeReport(int balance) {
         Double tax = balance*0.13;
         return "Общий доход составляет " + balance + " в том числе подоходный налог: " + tax;
