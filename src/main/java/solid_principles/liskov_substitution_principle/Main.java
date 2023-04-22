@@ -11,6 +11,7 @@ public class Main {
         for (Rectangle rectangle : rectangles) {
             rectangle.setA(5);
             rectangle.setB(10);
+            //TODO:почему 0 результат getSquare
             System.out.println(rectangle.getSquare());
         }
     }
